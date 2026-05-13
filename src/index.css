@@ -81,9 +81,10 @@ h1 {
 
 .flight-info-grid {
   display: grid;
-  grid-template-cols: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   margin-top: 3rem;
+  width: 100%;
 }
 
 .flight-card {
@@ -131,9 +132,11 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 24px;
 }
 
 .main-tabs {
+  margin-top: 24px;
   display: flex;
   gap: 0.5rem;
 }

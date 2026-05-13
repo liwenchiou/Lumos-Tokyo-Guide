@@ -80,7 +80,20 @@ const SparkleEffect = () => {
 
 function App() {
   const [activeTab, setActiveTab] = useState('map');
-  const [currentDay, setCurrentDay] = useState(1);
+  const [currentDay, setCurrentDay] = useState(() => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    
+    // Trip dates: 2026/5/25 ~ 5/29
+    if (year === 2026 && month === 5) {
+      if (date >= 25 && date <= 29) {
+        return date - 24; // 25th is Day 1, 26th is Day 2, etc.
+      }
+    }
+    return 1;
+  });
   const [mealTab, setMealTab] = useState('breakfast');
   const [completedItems, setCompletedItems] = useState([]);
 
