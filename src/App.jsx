@@ -41,7 +41,9 @@ const iconMap = {
   MapPin,
   Ship,
   Zap,
-  CheckCircle
+  CheckCircle,
+  Utensils,
+  Search
 };
 
 const SparkleEffect = () => {
@@ -125,12 +127,12 @@ function App() {
           <div className="flight-card">
             <div className="flight-card-label magic-font text-center">Departure ✈ JX800</div>
             <div className="flight-card-time text-center">10:40 <span className="opacity-50 mx-1">→</span> 15:05</div>
-            <div className="flight-card-route text-center">TPE - NRT</div>
+            <div className="flight-card-route text-center">TPE T1 - NRT T2</div>
           </div>
           <div className="flight-card">
             <div className="flight-card-label magic-font text-center">Return ✈ JX801</div>
             <div className="flight-card-time text-center">14:10 <span className="opacity-50 mx-1">→</span> 16:40</div>
-            <div className="flight-card-route text-center">NRT - TPE</div>
+            <div className="flight-card-route text-center">NRT T2 - TPE T1</div>
           </div>
         </div>
       </header>
