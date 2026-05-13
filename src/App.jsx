@@ -167,7 +167,7 @@ function App() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="flex items-center justify-between mb-8 border-b border-magic-gold/30 pb-4" style={{ borderBottom: '1px solid var(--glass-border)', paddingBottom: '1rem' }}>
+              <div className="flex items-center justify-between mb-12 border-b border-magic-gold/30 pb-6" style={{ borderBottom: '1px solid var(--glass-border)', paddingBottom: '1.5rem', marginBottom: '3rem' }}>
                 <h2 className="magic-font text-2xl font-bold text-white tracking-widest">{currentDayData.title}</h2>
                 <span className="magic-font text-sm text-magic-gold/70" style={{ color: 'rgba(212, 175, 55, 0.7)' }}>{currentDayData.date}</span>
               </div>
