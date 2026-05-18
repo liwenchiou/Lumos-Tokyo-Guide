@@ -7,6 +7,7 @@ export const itineraryData = {
             { time: "10:40", activity: "起飛：桃園 TPE", icon: "PlaneTakeoff", note: "準備享受胡同燒肉機上餐與星宇魔法飛行。", transport: "StarLux JX800", coords: "25.0792,121.2342" },
             { time: "15:05", activity: "抵達成田機場 NRT", icon: "PlaneLanding", note: "抵達成田 T2。辦理 VJW 入境。搭乘 Skyliner 直達京成上野站。", transport: "NRT Terminal 2", coords: "35.7722,140.3876" },
             { time: "17:30", activity: "Check-in: Serorin Light Hotel Tokyo", icon: "Home", note: "大江戶線「新御徒町站」A4 出口步行 3 分鐘即達。放下行李準備開吃！", transport: "京成上野 → 大江戶線 → 新御徒町", coords: "35.7053,139.7837" },
+            { time: "18:40", activity: "銀座時尚夜巡", icon: "Sparkles", note: "從飯店旁「上野站」搭乘銀座線直達。欣賞經典和光鐘樓與 Ginza Six 奢華夜景，感受極致優雅的東京首夜。", transport: "上野站 → 東京地鐵銀座線 (12分) → 銀座站", coords: "35.6721,139.7656" },
             { time: "19:00", activity: "晚宴：菊酔 (Kikusui)", icon: "Utensils", note: "御徒町站前居酒屋。餐後可順路逛逛阿美橫町商店街，感受夜晚氛圍。", transport: "步行 3 分鐘", coords: "35.7057,139.7737", reserved: true },
             { 
                 time: "19:00", 
@@ -44,7 +45,8 @@ export const itineraryData = {
                     coords: "35.7100,139.7744",
                     link: "https://maps.app.goo.gl/gCH7oBwrPxxL2UDz7?g_st=il"
                 },
-                { name: "肉屋橫丁", note: "秋葉原店，豪華和牛燒肉吃到飽。", coords: "35.6985,139.7731" }
+                { name: "銀座 篝 (Kagari)", note: "銀座超人氣雞白湯拉麵，湯頭濃郁如濃湯，魔法級的美味！", coords: "35.6710,139.7628" },
+                { name: "肉屋橫丁 (秋葉原)", note: "回程可選。豪華和牛燒肉吃到飽，離新御徒町很近。", coords: "35.6985,139.7731" }
             ]
         }
     },
