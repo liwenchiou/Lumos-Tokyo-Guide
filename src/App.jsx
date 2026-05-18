@@ -105,8 +105,14 @@ function App() {
     );
   };
 
-  const openNav = (coords) => {
-    window.open(`https://www.google.com/maps/dir/?api=1&destination=${coords}`, '_blank');
+  const openNav = (coords, link) => {
+    if (link) {
+      window.open(link, '_blank');
+    } else if (coords && coords.startsWith('http')) {
+      window.open(coords, '_blank');
+    } else {
+      window.open(`https://www.google.com/maps/dir/?api=1&destination=${coords}`, '_blank');
+    }
   };
 
   const searchNearby = (coords) => {
@@ -190,19 +196,26 @@ function App() {
               {currentDayData.items.map((item, idx) => {
                 const Icon = iconMap[item.icon] || MapPin;
                 return (
-                  <div key={idx} className="itinerary-item">
+                  <div key={idx} className={`itinerary-item ${item.reserved || item.icon === 'Utensils' || item.icon === 'Fish' ? 'is-food-item' : ''}`}>
                     <div className="icon-box">
                       <Icon size={20} />
                     </div>
                     <div className="item-content">
                       <div className="item-time magic-font">{item.time}</div>
-                      <h4 className="item-activity">{item.activity}</h4>
+                      <h4 className="item-activity">
+                        {item.activity}
+                        {item.reserved && (
+                          <span className="reserved-tag magic-font">
+                            已預約
+                          </span>
+                        )}
+                      </h4>
                       <div className="transport-tag">
                         <Train size={12} /> {item.transport}
                       </div>
                       <div className={`item-note-card ${item.critical ? 'critical' : ''}`}>
                         <p className="note-text">{item.note}</p>
-                        <button onClick={() => openNav(item.coords)} className="nav-btn">
+                        <button onClick={() => openNav(item.coords, item.link)} className="nav-btn">
                           <Navigation size={12} /> 路徑顯現
                         </button>
                       </div>
@@ -241,7 +254,7 @@ function App() {
                     <div key={i} className="food-option-card">
                       <h5 className="food-name">{opt.name}</h5>
                       <p className="food-note">{opt.note}</p>
-                      <button onClick={() => openNav(opt.coords)} className="food-loc-btn">
+                      <button onClick={() => openNav(opt.coords, opt.link)} className="food-loc-btn">
                         <MapPin size={12} /> 查看位置
                       </button>
                     </div>

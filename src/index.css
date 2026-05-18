@@ -201,6 +201,13 @@ nav {
   margin-bottom: 3.5rem;
   display: flex;
   align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.itinerary-item.is-food-item .icon-box {
+  background: var(--wizard-crimson);
+  color: white;
+  box-shadow: 0 0 15px rgba(116, 0, 1, 0.4);
 }
 
 .icon-box {
@@ -233,7 +240,22 @@ nav {
 .item-activity {
   font-size: 1.125rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reserved-tag {
+  background: var(--magic-gold);
+  color: var(--midnight);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
 
 .transport-tag {
