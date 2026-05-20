@@ -56,7 +56,22 @@ export const itineraryData = {
             { time: "09:00", activity: "步行至新御徒町站", icon: "MapPin", note: "離開飯店，步行約 3 分鐘前往新御徒町站 A4 出口。", transport: "步行", coords: "35.7068,139.7835" },
             { time: "09:30", activity: "前往影城", icon: "Train", note: "新御徒町站搭乘「都營大江戶線」直達豐島園，不需轉車！", transport: "都營大江戶線 (直達)", coords: "35.7454,139.6481" },
             { time: "10:30", activity: "哈利波特影城", icon: "Castle", note: "【九又四分之三月台】沉浸式魔法體驗。建議預留 4 小時。", transport: "豐島園站徒步 2 分", coords: "35.7454,139.6481" },
-            { time: "18:00", activity: "新宿夜巡", icon: "Sparkles", note: "回程搭大江戶線在新宿下車，看經典 3D 貓與新宿繁華夜景，感受不夜城的魔幻魅力。", transport: "都營大江戶線", coords: "35.6905,139.7005" },
+            { 
+                time: "17:30", 
+                activity: "花園神社", 
+                icon: "MapPin", 
+                note: "新宿東口的守護神，隱密而寧靜的能量景點。參拜祈求旅途平安，黃昏時分點亮的紅燈籠非常有大正浪漫的氣氛！", 
+                transport: "都營大江戶線 → 新宿站步行 8 分鐘", 
+                coords: "35.6935,139.7051"
+            },
+            { 
+                time: "18:15", 
+                activity: "新宿夜巡 (3D 貓)", 
+                icon: "Sparkles", 
+                note: "步行前往東口廣場，觀看著名的新宿 3D 貓立體大螢幕。順便拍攝熱鬧的新宿街景！", 
+                transport: "步行 5 分鐘", 
+                coords: "35.6905,139.7005" 
+            },
             { 
                 time: "19:00", 
                 activity: "晚餐：利久牛舌 (Lumine Est 新宿店)", 
@@ -75,7 +90,15 @@ export const itineraryData = {
                 coords: "35.6912,139.7011",
                 link: "https://maps.app.goo.gl/MLBgws1UtQiE5GbE9?g_st=il"
             },
-            { time: "21:30", activity: "返回飯店休息", icon: "Home", note: "魔法學院首日課程結束，返回新御徒町。", transport: "都營大江戶線 (直達)", coords: "35.7053,139.7837" }
+            { 
+                time: "21:00", 
+                activity: "歌舞伎町一番街", 
+                icon: "Sparkles", 
+                note: "東京最著名、最繁華的紅燈區入口。必拍著名的「歌舞伎町一番街」紅色霓虹牌坊，感受極致眩目的東京不夜城霓虹夜生活！", 
+                transport: "步行 5 分鐘", 
+                coords: "35.6938,139.7015" 
+            },
+            { time: "21:45", activity: "返回飯店休息", icon: "Home", note: "新宿夜巡圓滿結束，搭乘大江戶線直達回飯店充電。", transport: "都營大江戶線 (直達)", coords: "35.7053,139.7837" }
         ],
         food: {
             breakfast: [{ name: "新御徒町 7-11", note: "必買炸雞與厚切三明治，車上墊胃。", coords: "35.7068,139.7835" }],
