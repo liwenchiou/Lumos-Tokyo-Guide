@@ -8,7 +8,6 @@ export const itineraryData = {
             { time: "15:05", activity: "抵達成田機場 NRT", icon: "PlaneLanding", note: "抵達成田 T2。辦理 VJW 入境。搭乘 Skyliner 直達京成上野站。", transport: "NRT Terminal 2", coords: "35.7722,140.3876" },
             { time: "17:30", activity: "Check-in: Serorin Light Hotel Tokyo", icon: "Home", note: "大江戶線「新御徒町站」A4 出口步行 3 分鐘即達。放下行李準備開吃！", transport: "京成上野 → 大江戶線 → 新御徒町", coords: "35.7053,139.7837" },
             { time: "18:40", activity: "銀座時尚夜巡", icon: "Sparkles", note: "從飯店旁「上野站」搭乘銀座線直達。欣賞經典和光鐘樓與 Ginza Six 奢華夜景，感受極致優雅的東京首夜。", transport: "上野站 → 東京地鐵銀座線 (12分) → 銀座站", coords: "35.6721,139.7656" },
-            { time: "19:00", activity: "晚宴：菊酔 (Kikusui)", icon: "Utensils", note: "御徒町站前居酒屋。餐後可順路逛逛阿美橫町商店街，感受夜晚氛圍。", transport: "步行 3 分鐘", coords: "35.7057,139.7737", reserved: true },
             { 
                 time: "19:00", 
                 activity: "晚餐：拉麵 鴨 to 蔥", 
@@ -57,7 +56,25 @@ export const itineraryData = {
             { time: "09:00", activity: "步行至新御徒町站", icon: "MapPin", note: "離開飯店，步行約 3 分鐘前往新御徒町站 A4 出口。", transport: "步行", coords: "35.7068,139.7835" },
             { time: "09:30", activity: "前往影城", icon: "Train", note: "新御徒町站搭乘「都營大江戶線」直達豐島園，不需轉車！", transport: "都營大江戶線 (直達)", coords: "35.7454,139.6481" },
             { time: "10:30", activity: "哈利波特影城", icon: "Castle", note: "【九又四分之三月台】沉浸式魔法體驗。建議預留 4 小時。", transport: "豐島園站徒步 2 分", coords: "35.7454,139.6481" },
-            { time: "18:00", activity: "新宿夜巡", icon: "Sparkles", note: "回程搭大江戶線在新宿下車，看 3D 貓與新宿繁華夜景。", transport: "都營大江戶線", coords: "35.6905,139.7005" },
+            { time: "18:00", activity: "新宿夜巡", icon: "Sparkles", note: "回程搭大江戶線在新宿下車，看經典 3D 貓與新宿繁華夜景，感受不夜城的魔幻魅力。", transport: "都營大江戶線", coords: "35.6905,139.7005" },
+            { 
+                time: "19:00", 
+                activity: "晚餐：利久牛舌 (Lumine Est 新宿店)", 
+                icon: "Utensils", 
+                note: "位於 Lumine Est 7 樓。來自仙台的超人氣炭烤厚切牛舌，Q彈脆口多汁，搭配麥飯與牛尾湯簡直是絕配！", 
+                transport: "步行 2 分鐘 (新宿站直通)", 
+                coords: "35.6912,139.7011",
+                link: "https://bobbytravel.tw/rikyu-gyutan/"
+            },
+            { 
+                time: "20:15", 
+                activity: "甜點：HARBS 水果千層蛋糕 (Lumine Est 新宿店)", 
+                icon: "Utensils", 
+                note: "位於 Lumine Est 地下 2 樓。招牌水果千層蛋糕（Mille-crepes）非常強大，新鮮水果配上極致細膩奶油，必吃朝聖！", 
+                transport: "電梯下至 B2", 
+                coords: "35.6912,139.7011",
+                link: "https://maps.app.goo.gl/MLBgws1UtQiE5GbE9?g_st=il"
+            },
             { time: "21:30", activity: "返回飯店休息", icon: "Home", note: "魔法學院首日課程結束，返回新御徒町。", transport: "都營大江戶線 (直達)", coords: "35.7053,139.7837" }
         ],
         food: {
@@ -65,7 +82,19 @@ export const itineraryData = {
             lunch: [{ name: "Backlot Cafe", note: "影城內必喝奶油啤酒與學院主題餐。", coords: "35.7454,139.6481" }],
             dinner: [
                 { name: "六歌仙 燒肉", note: "新宿頂級和牛，需預約。", coords: "35.6925,139.6991" },
-                { name: "風雲兒 拉麵", note: "新宿超人氣沾麵，湯頭極濃郁。", coords: "35.6874,139.6981" }
+                { name: "風雲兒 拉麵", note: "新宿超人氣沾麵，湯頭極濃郁。", coords: "35.6874,139.6981" },
+                { 
+                    name: "HARBS (Lumine Est 新宿店)", 
+                    note: "超人氣甜點店，招牌「水果千層蛋糕」超級強！水果新鮮、奶油細緻不膩，必吃推薦！位在 Lumine Est 地下 2 樓。", 
+                    coords: "35.6912,139.7011",
+                    link: "https://maps.app.goo.gl/MLBgws1UtQiE5GbE9?g_st=il"
+                },
+                { 
+                    name: "牛舌炭燒 利久 (Lumine Est 新宿店)", 
+                    note: "來自仙台的超人氣炭烤牛舌專賣店！炭烤厚切牛舌口感Q彈脆口、鹹香多汁，搭配麥飯與牛尾湯簡直是絕配！位於 Lumine Est 7 樓。", 
+                    coords: "35.6912,139.7011",
+                    link: "https://bobbytravel.tw/rikyu-gyutan/"
+                }
             ]
         }
     },
@@ -139,7 +168,6 @@ export const checklistData = [
     { text: "SHIBUYA SKY 門票 (5/27 18:00)", critical: true },
     { text: "東京晴空塔 門票 (預約 5/28 11:30)", critical: true },
     { text: "Skyliner 機場快線來回票 (預購)", critical: false },
-    { text: "菊酔 (Kikusui) 晚餐預約 (5/25 19:00)", critical: true },
     { text: "水上巴士 淺草-台場 預約 (5/28 16:30)", critical: false },
     { text: "日本 ESIM / 實體網卡 (確認開通)", critical: true },
     { text: "Apple Wallet 綁定 Suica/Pasmo", critical: false },
