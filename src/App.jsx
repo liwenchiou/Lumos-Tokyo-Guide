@@ -115,8 +115,8 @@ function App() {
     }
   };
 
-  const searchNearby = (coords) => {
-    window.open(`https://www.google.com/maps/search/餐廳/@${coords},15z`, '_blank');
+  const searchNearby = (coords, keyword = '餐廳') => {
+    window.open(`https://www.google.com/maps/search/${keyword}/@${coords},15z`, '_blank');
   };
 
   const currentDayData = itineraryData[currentDay];
@@ -260,12 +260,20 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <button 
-                  onClick={() => searchNearby(currentDayData.items[0].coords)} 
-                  className="search-nearby-btn"
-                >
-                  <Search size={16} /> 🔍 顯現周邊美食
-                </button>
+                <div className="search-buttons-group">
+                  <button 
+                    onClick={() => searchNearby(currentDayData.items[0].coords, '餐廳')} 
+                    className="search-nearby-btn"
+                  >
+                    <Search size={16} /> 🔍 顯現周邊美食
+                  </button>
+                  <button 
+                    onClick={() => searchNearby(currentDayData.items[0].coords, '便利商店')} 
+                    className="search-nearby-btn convenience-btn"
+                  >
+                    <ShoppingBag size={16} /> 🔍 搜尋周邊超商
+                  </button>
+                </div>
               </div>
             </motion.div>
           ) : (

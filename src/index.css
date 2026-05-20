@@ -395,6 +395,13 @@ nav {
   gap: 0.25rem;
 }
 
+.search-buttons-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
 .search-nearby-btn {
   width: 100%;
   padding: 0.75rem;
@@ -406,13 +413,27 @@ nav {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-top: 1.5rem;
+  margin-top: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.search-nearby-btn:hover {
+  background: var(--wizard-crimson);
+  color: white;
+  border-color: var(--wizard-crimson);
+  transform: translateY(-2px);
+}
+
+.convenience-btn:hover {
+  background: #059669;
+  color: white;
+  border-color: #059669;
 }
 
 .checklist-container {
