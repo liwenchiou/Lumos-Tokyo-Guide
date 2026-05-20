@@ -7,7 +7,14 @@ export const itineraryData = {
             { time: "10:40", activity: "起飛：桃園 TPE", icon: "PlaneTakeoff", note: "準備享受胡同燒肉機上餐與星宇魔法飛行。", transport: "StarLux JX800", coords: "25.0792,121.2342" },
             { time: "15:05", activity: "抵達成田機場 NRT", icon: "PlaneLanding", note: "抵達成田 T2。辦理 VJW 入境。搭乘 Skyliner 直達京成上野站。", transport: "NRT Terminal 2", coords: "35.7722,140.3876" },
             { time: "17:30", activity: "Check-in: Serorin Light Hotel Tokyo", icon: "Home", note: "大江戶線「新御徒町站」A4 出口步行 3 分鐘即達。放下行李準備開吃！", transport: "京成上野 → 大江戶線 → 新御徒町", coords: "35.7053,139.7837" },
-            { time: "18:40", activity: "銀座時尚夜巡", icon: "Sparkles", note: "從飯店旁「上野站」搭乘銀座線直達。欣賞經典和光鐘樓與 Ginza Six 奢華夜景，感受極致優雅的東京首夜。", transport: "上野站 → 東京地鐵銀座線 (12分) → 銀座站", coords: "35.6721,139.7656" },
+            { 
+                time: "18:30", 
+                activity: "阿美橫丁商店街 (Ameyoko)", 
+                icon: "Sparkles", 
+                note: "從飯店步行 10 分鐘或搭地鐵 1 站即達。東京最熱鬧、最接地氣的露天商店街！集結了無數藥妝店、零食雜貨、水果攤與海鮮居酒屋，充滿濃厚的人情味與在地煙火氣，是體驗東京夜生活的絕佳首選！", 
+                transport: "步行 10 分鐘 或 搭乘地鐵 1 站", 
+                coords: "35.7101,139.7744" 
+            },
             { 
                 time: "19:00", 
                 activity: "晚餐：拉麵 鴨 to 蔥", 
@@ -44,7 +51,6 @@ export const itineraryData = {
                     coords: "35.7100,139.7744",
                     link: "https://maps.app.goo.gl/gCH7oBwrPxxL2UDz7?g_st=il"
                 },
-                { name: "銀座 篝 (Kagari)", note: "銀座超人氣雞白湯拉麵，湯頭濃郁如濃湯，魔法級的美味！", coords: "35.6710,139.7628" },
                 { name: "肉屋橫丁 (秋葉原)", note: "回程可選。豪華和牛燒肉吃到飽，離新御徒町很近。", coords: "35.6985,139.7731" }
             ]
         }
@@ -151,6 +157,15 @@ export const itineraryData = {
                 coords: "35.6705,139.7031" 
             },
             { 
+                time: "15:30", 
+                activity: "下午茶推薦（二選一）", 
+                icon: "Utensils", 
+                note: "☕️ 方案 A【Tas Yard】：隱密巷弄的文青愛店，招牌日式咖哩與神級咖啡凍超讚！\n🥞 方案 B【bills 表參道】：東急廣場 7 樓，朝聖「世界第一的鬆餅」與絕美露天綠意空中庭園！", 
+                transport: "步行", 
+                coords: "35.6687,139.7055",
+                link: "https://maps.app.goo.gl/2yacpXSDY6q7fjxm7?g_st=il"
+            },
+            { 
                 time: "17:00", 
                 activity: "澀谷夜遊與潮流購物", 
                 icon: "Sparkles", 
@@ -160,19 +175,19 @@ export const itineraryData = {
             },
             { 
                 time: "19:00", 
-                activity: "晚餐：Shake Shack (澀谷店)", 
+                activity: "晚餐：SHAKE SHACK 外苑いちょう並木店 🌳", 
                 icon: "Utensils", 
-                note: "人氣美式牛肉漢堡！招牌「ShackBurger」牛肉排鮮嫩多汁，搭配起司波浪薯條與澀谷店限定口味奶昔，血拼後的極致享受！", 
-                transport: "步行 3 分鐘 (近澀谷 PARCO)", 
-                coords: "35.6622,139.6994",
-                link: "https://maps.app.goo.gl/CrpdC2tsRLNsGeyc6?g_st=il"
+                note: "坐落於明治神宮外苑銀杏大道旁，以超人氣的開闊露天座位著稱。四周被繁茂的樹蔭包圍，是東京最悠閒浪漫的景觀漢堡店！點份多汁漢堡與限定奶昔，享受夢幻的東京之夜！", 
+                transport: "從澀谷搭乘地鐵銀座線至「外苑前站」步行 5 分鐘", 
+                coords: "35.6733,139.7199",
+                link: "https://share.google/AQ6L1hGfmUPNbYKWl"
             },
             { 
                 time: "21:30", 
                 activity: "返回飯店休息", 
                 icon: "Home", 
-                note: "搭乘銀座線直達上野，或大江戶線直達回新御徒町，結束充實美妙的一天。", 
-                transport: "東京地鐵銀座線 / 都營大江戶線", 
+                note: "搭乘地鐵或大江戶線直達回新御徒町，結束充實美妙的一天。", 
+                transport: "大江戶線 / 銀座線", 
                 coords: "35.7053,139.7837" 
             }
         ],
@@ -181,10 +196,22 @@ export const itineraryData = {
             lunch: [{ name: "敘敘苑 澀谷店", note: "已預約 12:30。高空景觀高級燒肉。", coords: "35.6595,139.7003" }],
             dinner: [
                 { 
-                    name: "Shake Shack (澀谷店)", 
-                    note: "美式超人氣牛肉漢堡！起司薯條與澀谷限定口味奶昔必點，多汁美味。位在宇田川町 (2F)。", 
-                    coords: "35.6622,139.6994",
-                    link: "https://maps.app.goo.gl/CrpdC2tsRLNsGeyc6?g_st=il"
+                    name: "SHAKE SHACK 外苑いちょう並木店", 
+                    note: "超人氣露天綠意景觀漢堡！位於明治神宮外苑銀杏林蔭大道旁，被繁茂綠意樹蔭包圍的戶外露天座位氣氛絕佳，享受最悠閒寫意的東京浪漫之夜！", 
+                    coords: "35.6733,139.7199",
+                    link: "https://share.google/AQ6L1hGfmUPNbYKWl"
+                },
+                { 
+                    name: "Tas Yard (千駄谷)", 
+                    note: "隱身在北參道巷弄的文青咖啡廳！招牌日式咖哩飯溫潤濃郁，招牌咖啡凍與法式吐司更是隱藏版神級美味，氛圍安靜清雅。", 
+                    coords: "35.6756,139.7057",
+                    link: "https://maps.app.goo.gl/cvju4QB9jwL6q6ZC9?g_st=il"
+                },
+                { 
+                    name: "bills 表參道", 
+                    note: "朝聖「世界第一的鬆餅」！位於東急廣場 7 樓，招牌香蕉蜂蜜奶油鬆餅口感如雲朵般綿密，還有視野絕佳的空中庭園平台！", 
+                    coords: "35.6687,139.7055",
+                    link: "https://maps.app.goo.gl/2yacpXSDY6q7fjxm7?g_st=il"
                 },
                 { name: "極味屋 漢堡排", note: "澀谷 PARCO 店，自己煎的樂趣。", coords: "35.6620,139.6991" }
             ]
