@@ -170,7 +170,7 @@ function App() {
                   }}
                   className={`day-btn magic-font ${currentDay === day ? 'active' : ''}`}
                 >
-                  DAY {day}
+                  DAY {day} ({itineraryData[day]?.date.split(' ')[0]})
                 </button>
               ))}
             </div>
