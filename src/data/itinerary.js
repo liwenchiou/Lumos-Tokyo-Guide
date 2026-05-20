@@ -125,19 +125,66 @@ export const itineraryData = {
         date: "5.27 Wed",
         title: "城市之巔與潮流",
         items: [
-            { time: "09:30", activity: "步行至新御徒町站", icon: "MapPin", note: "離開飯店，步行前往新御徒町站。本日將搭乘大江戶線直通代代木。", transport: "步行", coords: "35.7068,139.7835" },
-            { time: "10:00", activity: "明治神宮", icon: "TreePine", note: "搭乘大江戶線直達代代木站，步行 5 分鐘抵達。參拜壯麗鳥居。", transport: "新御徒町 → 都營大江戶線 (直達) → 代代木", coords: "35.6764,139.6993" },
-            { time: "12:30", activity: "敘敘苑 澀谷店", icon: "Utensils", note: "預約午餐時段。38樓高空景觀與高級燒肉。", transport: "原宿站 → JR 山手線 → 澀谷站", coords: "35.6595,139.7003" },
-            { time: "14:30", activity: "原宿 & 表參道", icon: "ShoppingBag", note: "逛潮流店、竹下通，感受日本最尖端流行。", transport: "澀谷 → 半藏門線/銀座線 → 表參道", coords: "35.6705,139.7031" },
-            { time: "16:00", activity: "bills 表參道", icon: "Utensils", note: "預約下午茶/早午餐。世界第一鬆餅朝聖。", transport: "表參道東急廣場 (步行)", coords: "35.6687,139.7055" },
-            { time: "18:00", activity: "SHIBUYA SKY", icon: "CloudSun", note: "預約夕陽時段俯瞰東京全景，預約 18:00 最美。", transport: "表參道 → 半藏門線/銀座線 → 澀谷", coords: "35.6585,139.7023" },
-            { time: "21:30", activity: "返回飯店休息", icon: "Home", note: "從澀谷搭乘銀座線至上野轉乘，或直接搭乘大江戶線返回。", transport: "銀座線/大江戶線", coords: "35.7053,139.7837" }
+            { time: "08:30", activity: "出發前往澀谷", icon: "MapPin", note: "離開飯店，搭乘大江戶線轉半藏門線直達澀谷，準備登上澀谷之巔！", transport: "都營大江戶線 → 清澄白河轉半藏門線 → 澀谷站", coords: "35.6585,139.7023" },
+            { 
+                time: "09:30", 
+                activity: "SHIBUYA SKY", 
+                icon: "CloudSun", 
+                note: "【預約早上 10:00 時段】避開傍晚爆滿人潮！早晨的光線無比明亮乾淨，富士山能見度最高，拍照極美！360度俯瞰經典的澀谷十字路口。", 
+                transport: "澀谷 Scramble Square 14樓入口", 
+                coords: "35.6585,139.7023",
+                critical: true
+            },
+            { 
+                time: "12:00", 
+                activity: "午餐：敘敘苑 澀谷店", 
+                icon: "Utensils", 
+                note: "【已預約 12:30】高級燒肉午間套餐，大啖精緻燒肉，高空窗景視野極佳。就在 SHIBUYA SKY 旁大樓，下樓即達！", 
+                transport: "步行 2 分鐘", 
+                coords: "35.6595,139.7003",
+                reserved: true
+            },
+            { time: "14:00", activity: "明治神宮", icon: "TreePine", note: "搭乘山手線僅需 1 站即可抵達原宿。漫步在被巨木參天環繞的幽靜林蔭參道中，享受森林芬多精與宏偉的大鳥居。", transport: "JR 山手線 (澀谷站 → 原宿站) 步行 5 分鐘", coords: "35.6764,139.6993" },
+            { time: "15:30", activity: "原宿 & 表參道", icon: "ShoppingBag", note: "原宿潮流中心！探索竹下通的特色店鋪、貓街潮流服飾店，接著散步至極富設計感的精品大道表參道。", transport: "步行", coords: "35.6705,139.7031" },
+            { 
+                time: "16:30", 
+                activity: "下午茶：bills 表參道", 
+                icon: "Utensils", 
+                note: "【已預約 16:30】朝聖「世界第一的鬆餅」！點份經典香蕉蜂蜜奶油鬆餅，在充滿自然綠意的露天平台上享受愜意午後。", 
+                transport: "東急廣場表參道原宿 7 樓 (步行)", 
+                coords: "35.6687,139.7055",
+                reserved: true
+            },
+            { 
+                time: "18:30", 
+                activity: "澀谷夜遊與潮流購物", 
+                icon: "Sparkles", 
+                note: "回到澀谷市區。必逛澀谷 PARCO（任天堂/Jump 旗艦店、潮牌聖地）及體驗經典的澀谷十字路口，感受眩目的東京潮流心臟！", 
+                transport: "步行或搭乘地鐵", 
+                coords: "35.6620,139.6991" 
+            },
+            { 
+                time: "19:30", 
+                activity: "晚餐：Shake Shack (澀谷店)", 
+                icon: "Utensils", 
+                note: "人氣美式牛肉漢堡！招牌「ShackBurger」多汁美味，搭配起司薯條與澀谷店限定奶昔，是在宇田川町血拼完的極致享受！", 
+                transport: "步行 3 分鐘 (近澀谷 PARCO)", 
+                coords: "35.6622,139.6994",
+                link: "https://maps.app.goo.gl/CrpdC2tsRLNsGeyc6?g_st=il"
+            },
+            { time: "21:30", activity: "返回飯店休息", icon: "Home", note: "搭乘銀座線直達上野，或大江戶線直達新御徒町，完美結束充實的一天。", transport: "東京地鐵銀座線 / 都營大江戶線", coords: "35.7053,139.7837" }
         ],
         food: {
-            breakfast: [{ name: "新御徒町周邊", note: "快速墊胃出發前往明治神宮。", coords: "35.7068,139.7835" }],
-            lunch: [{ name: "敘敘苑 澀谷店", note: "已預約 12:30。高空夜景高級燒肉。", coords: "35.6595,139.7003" }],
+            breakfast: [{ name: "新御徒町周邊", note: "出發前快速墊胃或超商美食。", coords: "35.7068,139.7835" }],
+            lunch: [{ name: "敘敘苑 澀谷店", note: "已預約 12:30。高空景觀高級燒肉。", coords: "35.6595,139.7003" }],
             dinner: [
-                { name: "bills 表參道", note: "已預約 16:00。鬆餅與歐式料理。", coords: "35.6687,139.7055" },
+                { name: "bills 表參道", note: "已預約 16:30。鬆餅與精緻歐式料理下午茶。", coords: "35.6687,139.7055" },
+                { 
+                    name: "Shake Shack (澀谷店)", 
+                    note: "美式超人氣牛肉漢堡！起司薯條與澀谷限定口味奶昔必點，多汁美味。位在宇田川町 (2F)。", 
+                    coords: "35.6622,139.6994",
+                    link: "https://maps.app.goo.gl/CrpdC2tsRLNsGeyc6?g_st=il"
+                },
                 { name: "極味屋 漢堡排", note: "澀谷 PARCO 店，自己煎的樂趣。", coords: "35.6620,139.6991" }
             ]
         }
@@ -188,7 +235,7 @@ export const checklistData = [
     { text: "旅遊平安險 & 海外突發疾病醫療險", critical: true },
     { text: "星宇航空電子登機證 (APP)", critical: true },
     { text: "哈利波特影城門票 (5/26 10:30)", critical: true },
-    { text: "SHIBUYA SKY 門票 (5/27 18:00)", critical: true },
+    { text: "SHIBUYA SKY 門票 (5/27 10:00 早上時段)", critical: true },
     { text: "東京晴空塔 門票 (預約 5/28 11:30)", critical: true },
     { text: "Skyliner 機場快線來回票 (預購)", critical: false },
     { text: "水上巴士 淺草-台場 預約 (5/28 16:30)", critical: false },
