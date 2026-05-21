@@ -216,8 +216,17 @@ export const itineraryData = {
             { time: "09:00", activity: "築地市場", icon: "Fish", note: "大江戶線直達。大啖新鮮海鮮丼與玉子燒。", transport: "新御徒町站 ➔ 都營大江戶線 (直達) ➔ 築地市場站", coords: "35.6655,139.7707" },
             { time: "11:30", activity: "東京晴空塔 Skytree", icon: "Castle", note: "世界第一高塔，俯瞰關東平原。建議步行至東銀座站搭乘淺草線直達最方便。", transport: "築地步行至 東銀座站 ➔ 都營淺草線 (直達) ➔ 押上站 (晴空塔直通)", coords: "35.7101,139.8107" },
             { time: "14:00", activity: "淺草雷門", icon: "MapPin", note: "搭乘淺草線抵達，參拜後步行至碼頭。", transport: "押上站 ➔ 都營淺草線 (1站) ➔ 淺草站", coords: "35.7148,139.7967" },
-            { time: "16:30", activity: "水上巴士前往台場", icon: "Ship", note: "搭乘未來感船隻 Himiko/Hotaluna 前往台場。", transport: "淺草碼頭 ➔ (水上巴士 Himiko/Hotaluna) ➔ 台場海濱公園", coords: "35.6246,139.7755" },
-            { time: "18:00", activity: "台場：獨角獸鋼彈", icon: "Zap", note: "看鋼彈表演、彩虹大橋夜景、購物中心。", transport: "台場站 ➔ 百合海鷗號 ➔ 汐留站 (轉乘) ➔ 都營大江戶線 ➔ 新御徒町站", coords: "35.6246,139.7755" },
+            { time: "16:30", activity: "水上巴士前往台場", icon: "Ship", note: "搭乘未來感船隻 Himiko/Hotaluna 前往台場。約 17:15 抵達台場海濱公園。", transport: "淺草碼頭 ➔ (水上巴士 Himiko/Hotaluna) ➔ 台場海濱公園", coords: "35.6246,139.7755" },
+            { 
+                time: "17:15", 
+                activity: "西松屋 DECKS 台場店 🛍️", 
+                icon: "ShoppingBag", 
+                note: "台場 DECKS Tokyo Beach Island Mall 內！下船後步行 5 分鐘即達。童裝、嬰兒用品超划算，趁鋼彈表演前快速掃貨！", 
+                transport: "步行 5 分鐘 ➔ DECKS Tokyo Beach Island Mall", 
+                coords: "35.6270,139.7740",
+                link: "https://maps.app.goo.gl/nishimatsuya-decks"
+            },
+            { time: "18:00", activity: "台場：獨角獸鋼彈", icon: "Zap", note: "鋼彈定時變形表演（每小時整點）、彩虹大橋夜景超美，購物中心DiverCity內也有逛。", transport: "步行 5 分鐘 ➔ DiverCity Tokyo Plaza", coords: "35.6246,139.7755" },
             { time: "21:30", activity: "返回飯店休息", icon: "Home", note: "從台場搭乘百合海鷗號至汐留，轉乘大江戶線直達新御徒町。", transport: "台場站 ➔ 百合海鷗號 ➔ 汐留站 (轉乘) ➔ 都營大江戶線 ➔ 新御徒町站", coords: "35.7053,139.7837" }
         ],
         food: {
