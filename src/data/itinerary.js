@@ -321,3 +321,22 @@ export const checklistData = [
     { text: "日幣現金 & 海外刷卡高回饋信用卡", critical: true },
     { text: "哈利波特學院袍/魔法棒 (重要裝備)", critical: false }
 ];
+
+export const pocketData = [
+    {
+        title: "東京地鐵路線圖",
+        description: "必備高清地鐵乘車指南，點擊即可放大查看。",
+        image: "metro_map.png"
+    },
+    {
+        title: "迪士尼門票截圖",
+        description: "迪士尼樂園電子門票與 QR Code 備份。",
+        image: "disney_ticket.png"
+    },
+    {
+        title: "飯店確認信 / 位置圖",
+        description: "Serorin Light Hotel 住宿確認單與聯絡資訊。",
+        image: "hotel_booking.png"
+    }
+];
+

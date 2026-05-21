@@ -22,9 +22,11 @@ import {
   Utensils,
   Search,
   Check,
-  Feather
+  Feather,
+  Briefcase,
+  Camera
 } from 'lucide-react';
-import { itineraryData, checklistData } from './data/itinerary';
+import { itineraryData, checklistData, pocketData } from './data/itinerary';
 
 const iconMap = {
   Plane,
@@ -98,6 +100,7 @@ function App() {
   });
   const [mealTab, setMealTab] = useState('breakfast');
   const [completedItems, setCompletedItems] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const toggleChecklist = (index) => {
     setCompletedItems(prev => 
@@ -158,6 +161,12 @@ function App() {
             >
               <Scroll size={16} /> 準備清單
             </button>
+            <button 
+              onClick={() => setActiveTab('pocket')} 
+              className={`tab-btn magic-font ${activeTab === 'pocket' ? 'active' : ''}`}
+            >
+              <Briefcase size={16} /> 魔法百寶袋
+            </button>
           </div>
           {activeTab === 'map' && (
             <div className="day-selector no-scrollbar">
@@ -180,7 +189,7 @@ function App() {
 
       <main className="container mt-10">
         <AnimatePresence mode="wait">
-          {activeTab === 'map' ? (
+          {activeTab === 'map' && (
             <motion.div
               key={`day-${currentDay}`}
               initial={{ opacity: 0, y: 20 }}
@@ -276,11 +285,14 @@ function App() {
                 </div>
               </div>
             </motion.div>
-          ) : (
+          )}
+
+          {activeTab === 'checklist' && (
             <motion.div
               key="checklist"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
               className="parchment-bg checklist-container"
             >
@@ -305,6 +317,86 @@ function App() {
                   </div>
                 ))}
               </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'pocket' && (
+            <motion.div
+              key="pocket"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+              className="parchment-bg pocket-container"
+            >
+              <h3 className="magic-font pocket-title">
+                <Briefcase size={24} color="var(--wizard-crimson)" />
+                魔法百寶袋 💼
+              </h3>
+              <p className="pocket-subtitle">放置您出遊必備的地鐵圖、門票截圖或重要單據，點擊即可瞬間顯現！</p>
+              
+              <div className="pocket-grid">
+                {pocketData.map((item, idx) => (
+                  <div 
+                    key={idx} 
+                    className="pocket-card"
+                    onClick={() => setSelectedImage(item)}
+                  >
+                    <div className="pocket-card-icon">
+                      <Camera size={20} color="var(--magic-gold)" />
+                    </div>
+                    <div className="pocket-card-info">
+                      <h4 className="pocket-card-title magic-font">{item.title}</h4>
+                      <p className="pocket-card-desc">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Lightbox / Image Modal */}
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div 
+              className="lightbox-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedImage(null)}
+            >
+              <motion.div 
+                className="lightbox-content"
+                initial={{ scale: 0.9, y: 20 }}
+                animate={{ scale: 1, y: 0 }}
+                exit={{ scale: 0.9, y: 20 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button className="lightbox-close" onClick={() => setSelectedImage(null)}>✕</button>
+                <h3 className="lightbox-title magic-font">{selectedImage.title}</h3>
+                <div className="lightbox-img-wrapper">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}pocket/${selectedImage.image}`} 
+                    alt={selectedImage.title} 
+                    onError={(e) => {
+                      // Fallback to error banner if image file doesn't exist
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="lightbox-fallback" style={{ display: 'none' }}>
+                    <div className="fallback-inner">
+                      <p className="fallback-magic-text">✨ 魔法影像尚未歸位 ✨</p>
+                      <span className="fallback-hint">請將您的截圖/圖片命名為：</span>
+                      <code className="fallback-filename">{selectedImage.image}</code>
+                      <span className="fallback-hint">並放入此路徑資料夾中：</span>
+                      <code className="fallback-path">/public/pocket/</code>
+                    </div>
+                  </div>
+                </div>
+                <p className="lightbox-desc">{selectedImage.description}</p>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
