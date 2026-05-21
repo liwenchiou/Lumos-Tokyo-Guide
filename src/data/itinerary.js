@@ -5,14 +5,14 @@ export const itineraryData = {
         items: [
             { time: "08:10", activity: "桃園機場報到", icon: "Plane", note: "【星宇 JX800】第一航廈。建議提早抵達享受貴賓室或逛逛機場。", transport: "桃園機場 T1", coords: "25.0792,121.2342", critical: true },
             { time: "10:40", activity: "起飛：桃園 TPE", icon: "PlaneTakeoff", note: "準備享受胡同燒肉機上餐與星宇魔法飛行。", transport: "StarLux JX800", coords: "25.0792,121.2342" },
-            { time: "15:05", activity: "抵達成田機場 NRT", icon: "PlaneLanding", note: "抵達成田 T2。辦理 VJW 入境。搭乘 Skyliner 直達京成上野站。", transport: "NRT Terminal 2", coords: "35.7722,140.3876" },
-            { time: "17:30", activity: "Check-in: Serorin Light Hotel Tokyo", icon: "Home", note: "大江戶線「新御徒町站」A4 出口步行 3 分鐘即達。放下行李準備開吃！", transport: "京成上野 → 大江戶線 → 新御徒町", coords: "35.7053,139.7837" },
+            { time: "15:05", activity: "抵達成田機場 NRT", icon: "PlaneLanding", note: "抵達成田 T2。辦理 VJW 入境。搭乘 Skyliner 直達京成上野站。", transport: "成田機場第2・第3候機樓站 ➔ (京成電鐵 Skyliner) ➔ 京成上野站", coords: "35.7722,140.3876" },
+            { time: "17:30", activity: "Check-in: Serorin Light Hotel Tokyo", icon: "Home", note: "大江戶線「新御徒町站」A4 出口步行 3 分鐘即達。放下行李準備開吃！", transport: "京成上野站 ➔ 步行至 上野御徒町站 ➔ 都營大江戶線 ➔ 新御徒町站", coords: "35.7053,139.7837" },
             { 
                 time: "18:30", 
                 activity: "阿美橫丁商店街 (Ameyoko)", 
                 icon: "Sparkles", 
                 note: "從飯店步行 10 分鐘或搭地鐵 1 站即達。東京最熱鬧、最接地氣的露天商店街！集結了無數藥妝店、零食雜貨、水果攤與海鮮居酒屋，充滿濃厚的人情味與在地煙火氣，是體驗東京夜生活的絕佳首選！", 
-                transport: "步行 10 分鐘 或 搭乘地鐵 1 站", 
+                transport: "步行 10 分鐘 或 新御徒町站 ➔ 都營大江戶線 (1站) ➔ 上野御徒町站", 
                 coords: "35.7101,139.7744" 
             },
             { 
@@ -60,14 +60,14 @@ export const itineraryData = {
         title: "霍格華茲開學日",
         items: [
             { time: "09:00", activity: "步行至新御徒町站", icon: "MapPin", note: "離開飯店，步行約 3 分鐘前往新御徒町站 A4 出口。", transport: "步行", coords: "35.7068,139.7835" },
-            { time: "09:30", activity: "前往影城", icon: "Train", note: "新御徒町站搭乘「都營大江戶線」直達豐島園，不需轉車！", transport: "都營大江戶線 (直達)", coords: "35.7454,139.6481" },
+            { time: "09:30", activity: "前往影城", icon: "Train", note: "新御徒町站搭乘「都營大江戶線」直達豐島園，不需轉車！", transport: "新御徒町站 ➔ 都營大江戶線 (直達) ➔ 豐島園站", coords: "35.7454,139.6481" },
             { time: "10:30", activity: "哈利波特影城", icon: "Castle", note: "【九又四分之三月台】沉浸式魔法體驗。建議預留 4 小時。", transport: "豐島園站徒步 2 分", coords: "35.7454,139.6481" },
             { 
                 time: "17:30", 
                 activity: "花園神社", 
                 icon: "MapPin", 
                 note: "新宿東口的守護神，隱密而寧靜的能量景點。參拜祈求旅途平安，黃昏時分點亮的紅燈籠非常有大正浪漫的氣氛！", 
-                transport: "都營大江戶線 → 新宿站步行 8 分鐘", 
+                transport: "豐島園站 ➔ 都營大江戶線 ➔ 東新宿站 (A2出口) ➔ 步行 8 分鐘", 
                 coords: "35.6935,139.7051"
             },
             { 
@@ -104,7 +104,7 @@ export const itineraryData = {
                 transport: "步行 5 分鐘", 
                 coords: "35.6938,139.7015" 
             },
-            { time: "21:45", activity: "返回飯店休息", icon: "Home", note: "新宿夜巡圓滿結束，搭乘大江戶線直達回飯店充電。", transport: "都營大江戶線 (直達)", coords: "35.7053,139.7837" }
+            { time: "21:45", activity: "返回飯店休息", icon: "Home", note: "新宿夜巡圓滿結束，搭乘大江戶線直達回飯店充電。", transport: "東新宿站 (或 新宿西口站) ➔ 都營大江戶線 (直達) ➔ 新御徒町站", coords: "35.7053,139.7837" }
         ],
         food: {
             breakfast: [{ name: "新御徒町 7-11", note: "必買炸雞與厚切三明治，車上墊胃。", coords: "35.7068,139.7835" }],
@@ -136,7 +136,7 @@ export const itineraryData = {
                 activity: "明治神宮", 
                 icon: "TreePine", 
                 note: "搭乘大江戶線直達代代木站，步行 5 分鐘抵達。清晨的明治神宮清幽涼爽，參拜巨大而神聖的大鳥居，在森林環抱的參道中享受芬多精，沉澱心靈。", 
-                transport: "新御徒町 → 都營大江戶線 (直達) → 代代木", 
+                transport: "新御徒町站 ➔ 都營大江戶線 (直達) ➔ 代代木站", 
                 coords: "35.6764,139.6993" 
             },
             { 
@@ -144,7 +144,7 @@ export const itineraryData = {
                 activity: "午餐：敘敘苑 澀谷店", 
                 icon: "Utensils", 
                 note: "【已預約 12:30】大啖頂級燒肉！預約窗景座位享受 38 樓高空景觀與高級燒肉午間套餐，高CP值又極致享受！", 
-                transport: "明治神宮/原宿站 → 山手線 → 澀谷站", 
+                transport: "原宿站 ➔ JR 山手線 (1站) ➔ 澀谷站", 
                 coords: "35.6595,139.7003",
                 reserved: true
             },
@@ -153,7 +153,7 @@ export const itineraryData = {
                 activity: "原宿 & 表參道潮流探索", 
                 icon: "ShoppingBag", 
                 note: "原宿潮流中心！從澀谷沿著貓街散步或搭山手線回原宿，探索竹下通的特色店鋪、潮流服飾聖地，接著漫步至極富設計感的精品大道表參道。", 
-                transport: "步行 / 山手線", 
+                transport: "步行 (貓街散步) 或 澀谷站 ➔ JR 山手線 ➔ 原宿站", 
                 coords: "35.6705,139.7031" 
             },
             { 
@@ -178,7 +178,7 @@ export const itineraryData = {
                 activity: "晚餐：SHAKE SHACK 外苑いちょう並木店 🌳", 
                 icon: "Utensils", 
                 note: "坐落於明治神宮外苑銀杏大道旁，以超人氣的開闊露天座位著稱。四周被繁茂的樹蔭包圍，是東京最悠閒浪漫的景觀漢堡店！點份多汁漢堡與限定奶昔，享受夢幻的東京之夜！", 
-                transport: "從澀谷搭乘地鐵銀座線至「外苑前站」步行 5 分鐘", 
+                transport: "澀谷站 ➔ 東京地鐵銀座線 ➔ 外苑前站 (4a出口) ➔ 步行 5 分鐘", 
                 coords: "35.6733,139.7199",
                 link: "https://share.google/AQ6L1hGfmUPNbYKWl"
             },
@@ -187,7 +187,7 @@ export const itineraryData = {
                 activity: "返回飯店休息", 
                 icon: "Home", 
                 note: "搭乘地鐵或大江戶線直達回新御徒町，結束充實美妙的一天。", 
-                transport: "大江戶線 / 銀座線", 
+                transport: "外苑前站 ➔ 東京地鐵銀座線 ➔ 青山一丁目站 (轉乘) ➔ 都營大江戶線 ➔ 新御徒町站", 
                 coords: "35.7053,139.7837" 
             }
         ],
@@ -222,12 +222,12 @@ export const itineraryData = {
         title: "海景、鋼彈與老街",
         items: [
             { time: "08:30", activity: "步行至新御徒町站", icon: "MapPin", note: "離開飯店，步行前往新御徒町站，開始海鮮美食之旅。", transport: "步行", coords: "35.7068,139.7835" },
-            { time: "09:00", activity: "築地市場", icon: "Fish", note: "大江戶線直達。大啖新鮮海鮮丼與玉子燒。", transport: "新御徒町 → 都營大江戶線 → 築地市場", coords: "35.6655,139.7707" },
-            { time: "11:30", activity: "東京晴空塔 Skytree", icon: "Castle", note: "世界第一高塔，俯瞰關東平原。建議步行至東銀座站搭乘淺草線直達最方便。", transport: "東銀座站 → 都營淺草線 (直達) → 押上站", coords: "35.7101,139.8107" },
-            { time: "14:00", activity: "淺草雷門", icon: "MapPin", note: "搭乘淺草線抵達，參拜後步行至碼頭。", transport: "押上站 → 都營淺草線 (1站) → 淺草站", coords: "35.7148,139.7967" },
-            { time: "16:30", activity: "水上巴士前往台場", icon: "Ship", note: "搭乘未來感船隻 Himiko/Hotaluna 前往台場。", transport: "淺草碼頭 → 水上巴士 → 台場", coords: "35.6246,139.7755" },
-            { time: "18:00", activity: "台場：獨角獸鋼彈", icon: "Zap", note: "看鋼彈表演、彩虹大橋夜景、購物中心。", transport: "台場 → 百合海鷗號 → 汐留 → 大江戶線", coords: "35.6246,139.7755" },
-            { time: "21:30", activity: "返回飯店休息", icon: "Home", note: "從台場搭乘百合海鷗號至汐留，轉乘大江戶線直達新御徒町。", transport: "百合海鷗號 + 大江戶線", coords: "35.7053,139.7837" }
+            { time: "09:00", activity: "築地市場", icon: "Fish", note: "大江戶線直達。大啖新鮮海鮮丼與玉子燒。", transport: "新御徒町站 ➔ 都營大江戶線 (直達) ➔ 築地市場站", coords: "35.6655,139.7707" },
+            { time: "11:30", activity: "東京晴空塔 Skytree", icon: "Castle", note: "世界第一高塔，俯瞰關東平原。建議步行至東銀座站搭乘淺草線直達最方便。", transport: "築地步行至 東銀座站 ➔ 都營淺草線 (直達) ➔ 押上站 (晴空塔直通)", coords: "35.7101,139.8107" },
+            { time: "14:00", activity: "淺草雷門", icon: "MapPin", note: "搭乘淺草線抵達，參拜後步行至碼頭。", transport: "押上站 ➔ 都營淺草線 (1站) ➔ 淺草站", coords: "35.7148,139.7967" },
+            { time: "16:30", activity: "水上巴士前往台場", icon: "Ship", note: "搭乘未來感船隻 Himiko/Hotaluna 前往台場。", transport: "淺草碼頭 ➔ (水上巴士 Himiko/Hotaluna) ➔ 台場海濱公園", coords: "35.6246,139.7755" },
+            { time: "18:00", activity: "台場：獨角獸鋼彈", icon: "Zap", note: "看鋼彈表演、彩虹大橋夜景、購物中心。", transport: "台場站 ➔ 百合海鷗號 ➔ 汐留站 (轉乘) ➔ 都營大江戶線 ➔ 新御徒町站", coords: "35.6246,139.7755" },
+            { time: "21:30", activity: "返回飯店休息", icon: "Home", note: "從台場搭乘百合海鷗號至汐留，轉乘大江戶線直達新御徒町。", transport: "台場站 ➔ 百合海鷗號 ➔ 汐留站 (轉乘) ➔ 都營大江戶線 ➔ 新御徒町站", coords: "35.7053,139.7837" }
         ],
         food: {
             breakfast: [{ name: "築地 虎杖", note: "豪華海鮮珠寶盒，視覺味覺享受。", coords: "35.6655,139.7707" }],
@@ -240,19 +240,70 @@ export const itineraryData = {
     },
     5: {
         date: "5.29 Fri",
-        title: "最後掃貨與歸途",
+        title: "古城散策與魔法歸途",
         items: [
-            { time: "09:00", activity: "辦理退房", icon: "Home", note: "帶著行李辦理退房，準備最後掃貨與歸台。", transport: "Serorin Light Hotel", coords: "35.7053,139.7837" },
-            { time: "09:30", activity: "最後掃貨：多慶屋", icon: "ShoppingBag", note: "飯店旁紫色大樓，最後採買藥妝零食。", transport: "步行 10 分鐘", coords: "35.7073,139.7753" },
-            { time: "11:00", activity: "前往成田：Skyliner", icon: "Train", note: "務必搭上此班，預計 11:45 抵達成田 T2。", transport: "京成上野 → Skyliner", coords: "35.7124,139.7761" },
-            { time: "11:45", activity: "星宇報到 (成田 T2)", icon: "CheckCircle", note: "【重要】起飛前 2.5 小時抵達，留時間逛免稅店。", transport: "成田 T2", coords: "35.7722,140.3876", critical: true },
-            { time: "14:10", activity: "起飛：成田 NRT", icon: "PlaneTakeoff", note: "星宇 JX801。帶著滿滿魔法戰利品回台灣。", transport: "StarLux JX801", coords: "35.7722,140.3876" },
-            { time: "16:40", activity: "抵達：桃園 TPE", icon: "PlaneLanding", note: "平安抵達台灣，魔法旅程圓滿結束。", transport: "TPE Terminal 1", coords: "25.0792,121.2342" }
+            { 
+                time: "08:30", 
+                activity: "退房與寄存行李", 
+                icon: "Home", 
+                note: "清晨辦理退房，將大件行李寄存於飯店，一身輕鬆地出發前往皇居，進行最後的東京經典巡禮！", 
+                transport: "Serorin Light Hotel Tokyo", 
+                coords: "35.7053,139.7837" 
+            },
+            { 
+                time: "09:00", 
+                activity: "皇居外苑二重橋 & 東御苑 散策 🏰", 
+                icon: "TreePine", 
+                note: "【免門票・免預約】清晨東御苑剛開門時空氣清新、人煙稀少！悠閒漫步於江戶城天守台遺跡、護城河與宏偉城牆之間，感受日本皇室的歷史底蘊，並走到外圍與經典的二重橋（眼鏡橋）合照。", 
+                transport: "仲御徒町站 ➔ 東京地鐵日比谷線 ➔ 日比谷站 (轉乘) ➔ 千代田線 ➔ 二重橋前站", 
+                coords: "35.6852,139.7628" 
+            },
+            { 
+                time: "10:00", 
+                activity: "東京車站丸之內站舍 🏢", 
+                icon: "Sparkles", 
+                note: "從皇居大手門直接散步 8-10 分鐘即可抵達。欣賞並拍攝宏偉的百年復古紅磚車站，順便在東京車站丸之內廣場留下絕美紀念照！拍完後搭乘山手線快速返回飯店領取行李。", 
+                transport: "步行 8 分鐘 ➔ 東京車站 ➔ JR 山手線 (7分鐘) ➔ 上野站 ➔ 返回飯店", 
+                coords: "35.6812,139.7671" 
+            },
+            { 
+                time: "11:00", 
+                activity: "前往成田：Skyliner", 
+                icon: "Train", 
+                note: "回飯店領取行李，步行前往京成上野站，搭乘 Skyliner 特快列車直達機場，預計 11:45 抵達成田 T2。", 
+                transport: "京成上野站 ➔ (京成電鐵 Skyliner) ➔ 成田機場第2・第3候機樓站", 
+                coords: "35.7124,139.7761" 
+            },
+            { 
+                time: "11:45", 
+                activity: "星宇報到 (成田 T2)", 
+                icon: "CheckCircle", 
+                note: "【重要】起飛前 2.5 小時抵達，辦理行李託運並進入免稅店，享受最後的免稅採購與精緻美味午餐。", 
+                transport: "成田 T2", 
+                coords: "35.7722,140.3876", 
+                critical: true 
+            },
+            { 
+                time: "14:10", 
+                activity: "起飛：成田 NRT", 
+                icon: "PlaneTakeoff", 
+                note: "星宇 JX801。帶著滿滿魔法戰利品與不捨回台灣。", 
+                transport: "StarLux JX801", 
+                coords: "35.7722,140.3876" 
+            },
+            { 
+                time: "16:40", 
+                activity: "抵達：桃園 TPE", 
+                icon: "PlaneLanding", 
+                note: "平安抵達台灣，魔法旅程圓滿結束。", 
+                transport: "TPE Terminal 1", 
+                coords: "25.0792,121.2342" 
+            }
         ],
         food: {
-            breakfast: [{ name: "MISOJYU 淺草", note: "精緻味噌湯早餐，溫暖你的胃。", coords: "35.7115,139.7941" }],
-            lunch: [{ name: "成田機場免稅區", note: "最後一碗日式拉麵或伴手禮區輕食。", coords: "35.7722,140.3876" }],
-            dinner: [{ name: "台灣想念的味道", note: "溫暖的家與台灣美食。", coords: "25.0792,121.2342" }]
+            breakfast: [{ name: "飯店周邊輕食", note: "清晨出發前在超商快速墊胃，或是上野美味麵包店。", coords: "35.7068,139.7835" }],
+            lunch: [{ name: "東京車站 / 成田機場美食", note: "東京車站一番街拉麵，或成田機場內最後的日式定食，吃飽飽再登機！", coords: "35.7722,140.3876" }],
+            dinner: [{ name: "台灣溫暖的家", note: "平安返家，享用想念的台灣美味。", coords: "25.0792,121.2342" }]
         }
     }
 };
