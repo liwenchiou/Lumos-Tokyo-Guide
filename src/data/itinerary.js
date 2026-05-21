@@ -323,20 +323,70 @@ export const checklistData = [
 ];
 
 export const pocketData = [
+    // ── 交通 ──
     {
-        title: "東京地鐵路線圖",
-        description: "東京 Metro + 都營地下鐵完整路線圖。",
+        title: "🗺️ 東京地鐵路線圖",
+        description: "Tokyo Metro + 都營地下鐵完整路線圖（英文版）。",
         url: "https://www.tokyometro.jp/en/subwaymap/"
     },
     {
-        title: "Google 地圖已儲存景點",
-        description: "我的 Google Maps 行前收藏清單。",
-        url: "https://maps.google.com"
+        title: "🚆 Hyperdia 路線查詢",
+        description: "日本最強電車路線時刻查詢工具，輸入出發/目的地即可。",
+        url: "https://www.hyperdia.com/en/"
     },
     {
-        title: "飯店訂房確認信",
-        description: "Serorin Light Hotel 住宿訂單連結。",
-        url: "https://www.google.com"
+        title: "🧳 ecbo cloak 行李寄存",
+        description: "京成上野站行李寄存預約，D5 退房當天必用。",
+        url: "https://cloak.ecbo.io/en"
+    },
+    {
+        title: "🛥️ 水上巴士 東京 Cruise",
+        description: "淺草 ➔ 台場水上巴士 Himiko/Hotaluna 時刻與預約。",
+        url: "https://www.suijobus.co.jp/en/"
+    },
+    // ── 機場 & 航班 ──
+    {
+        title: "✈️ 星宇航空 Web Check-in",
+        description: "班機 JX800/JX801 線上報到入口。",
+        url: "https://www.starlux-airlines.com/zh-TW/check-in"
+    },
+    {
+        title: "🛬 成田機場 即時航班",
+        description: "成田機場官網，確認航班狀態、入境資訊。",
+        url: "https://www.narita-airport.jp/en/"
+    },
+    // ── 景點預約 ──
+    {
+        title: "🏰 哈利波特影城 門票確認",
+        description: "Warner Bros. 影城門票查詢與條碼。",
+        url: "https://www.wbstudiotour.jp/en/"
+    },
+    {
+        title: "🗼 東京晴空塔 預約",
+        description: "Skytree 門票預約與入場時間確認。",
+        url: "https://www.tokyo-skytree.jp/en/ticket/"
+    },
+    // ── 實用工具 ──
+    {
+        title: "🌤️ 東京天氣預報",
+        description: "出發前確認東京 5/25–5/29 旅遊期間天氣。",
+        url: "https://www.weather.com/weather/tenday/l/Tokyo+Japan+JAXX0085:1:JA"
+    },
+    {
+        title: "💴 TWD → JPY 匯率換算",
+        description: "台幣換日幣即時匯率計算機。",
+        url: "https://www.google.com/search?q=TWD+to+JPY"
+    },
+    {
+        title: "📋 Visit Japan Web",
+        description: "日本入境審查 QR Code 查詢，入境前必備。",
+        url: "https://vjw-lp.digital.go.jp/en/"
+    },
+    {
+        title: "🌐 Google 翻譯",
+        description: "日文翻譯、相機即時翻拍菜單神器。",
+        url: "https://translate.google.com/?sl=ja&tl=zh-TW"
     }
 ];
+
 
