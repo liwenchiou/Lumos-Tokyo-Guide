@@ -325,18 +325,18 @@ export const checklistData = [
 export const pocketData = [
     {
         title: "東京地鐵路線圖",
-        description: "必備高清地鐵乘車指南，點擊即可放大查看。",
-        image: "metro_map.png"
+        description: "東京 Metro + 都營地下鐵完整路線圖。",
+        url: "https://www.tokyometro.jp/en/subwaymap/"
     },
     {
-        title: "迪士尼門票截圖",
-        description: "迪士尼樂園電子門票與 QR Code 備份。",
-        image: "disney_ticket.png"
+        title: "Google 地圖已儲存景點",
+        description: "我的 Google Maps 行前收藏清單。",
+        url: "https://maps.google.com"
     },
     {
-        title: "飯店確認信 / 位置圖",
-        description: "Serorin Light Hotel 住宿確認單與聯絡資訊。",
-        image: "hotel_booking.png"
+        title: "飯店訂房確認信",
+        description: "Serorin Light Hotel 住宿訂單連結。",
+        url: "https://www.google.com"
     }
 ];
 
