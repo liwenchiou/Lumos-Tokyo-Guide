@@ -375,25 +375,59 @@ function App() {
               >
                 <button className="lightbox-close" onClick={() => setSelectedImage(null)}>✕</button>
                 <h3 className="lightbox-title magic-font">{selectedImage.title}</h3>
-                <div className="lightbox-img-wrapper">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}pocket/${selectedImage.image}`} 
-                    alt={selectedImage.title} 
-                    onError={(e) => {
-                      // Fallback to error banner if image file doesn't exist
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="lightbox-fallback" style={{ display: 'none' }}>
-                    <div className="fallback-inner">
-                      <p className="fallback-magic-text">✨ 魔法影像尚未歸位 ✨</p>
-                      <span className="fallback-hint">請將您的截圖/圖片命名為：</span>
-                      <code className="fallback-filename">{selectedImage.image}</code>
-                      <span className="fallback-hint">並放入此路徑資料夾中：</span>
-                      <code className="fallback-path">/public/pocket/</code>
-                    </div>
-                  </div>
+                <div className={`lightbox-img-wrapper ${selectedImage.image?.toLowerCase().endsWith('.pdf') ? 'is-pdf' : ''}`}>
+                  {selectedImage.image?.toLowerCase().endsWith('.pdf') ? (
+                    <>
+                      <iframe
+                        src={`${import.meta.env.BASE_URL}pocket/${selectedImage.image}`}
+                        title={selectedImage.title}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 'none', borderRadius: '0.75rem' }}
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="lightbox-fallback" style={{ display: 'none' }}>
+                        <div className="fallback-inner">
+                          <p className="fallback-magic-text">✨ 魔法文件尚未歸位 ✨</p>
+                          <span className="fallback-hint">請將 PDF 命名為：</span>
+                          <code className="fallback-filename">{selectedImage.image}</code>
+                          <span className="fallback-hint">並放入此路徑資料夾中：</span>
+                          <code className="fallback-path">/public/pocket/</code>
+                        </div>
+                      </div>
+                      <a
+                        className="pdf-open-btn"
+                        href={`${import.meta.env.BASE_URL}pocket/${selectedImage.image}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        📄 另開新分頁查看 PDF
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <img 
+                        src={`${import.meta.env.BASE_URL}pocket/${selectedImage.image}`} 
+                        alt={selectedImage.title} 
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="lightbox-fallback" style={{ display: 'none' }}>
+                        <div className="fallback-inner">
+                          <p className="fallback-magic-text">✨ 魔法影像尚未歸位 ✨</p>
+                          <span className="fallback-hint">請將您的截圖/圖片命名為：</span>
+                          <code className="fallback-filename">{selectedImage.image}</code>
+                          <span className="fallback-hint">並放入此路徑資料夾中：</span>
+                          <code className="fallback-path">/public/pocket/</code>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
                 <p className="lightbox-desc">{selectedImage.description}</p>
               </motion.div>

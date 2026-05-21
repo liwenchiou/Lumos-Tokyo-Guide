@@ -742,3 +742,40 @@ nav {
   text-align: center;
 }
 
+/* PDF-specific lightbox styles */
+.lightbox-img-wrapper.is-pdf {
+  min-height: 60vh;
+  max-height: 70vh;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+}
+
+.lightbox-img-wrapper.is-pdf iframe {
+  flex: 1;
+  min-height: 55vh;
+}
+
+.pdf-open-btn {
+  display: block;
+  text-align: center;
+  padding: 0.6rem 1.25rem;
+  margin-top: 0.75rem;
+  background: var(--wizard-crimson);
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.pdf-open-btn:hover {
+  background: var(--magic-gold);
+  color: var(--midnight);
+  transform: translateY(-2px);
+}
+
+
